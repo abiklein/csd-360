@@ -1,0 +1,67 @@
+<!--
+Abigail Klein
+April 2, 2023
+Module 4 Assignment
+
+Program Description:
+A page that displays the result of (i + i % 3 / 7 - 2 + 7 ** 3) in various ways.
+The results will vary depending on the placement of additional parentheses.
+The following results must be calculated and displayed:
+      - 1183.2857142857142
+      - 341.14285714285717
+      - 1185.4
+      - 842.0011574074074
+      - 113.28571428571433
+      - 343.2
+      - 841.75
+-->
+
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <head>
+      <title>Module 4 Assignment</title>
+
+       <script>
+
+         var i = 842;
+         document.write("i + i % 3 / 7 - 2 + 7 ** 3 = <br>");
+         document.write(i + i % 3 / 7 - 2 + 7 ** 3 + "<br><br>");
+         //Result: 1183.2857142857142
+
+         document.write("(i + i) % 3 / 7 - 2 + 7 ** 3 = <br>");
+         document.write((i + i) % 3 / 7 - 2 + 7 ** 3 + "<br><br>");
+         //Result: 341.14285714285717
+
+         document.write("i + i % 3 / (7 - 2) + 7 ** 3 = <br>");
+         document.write(i + i % 3 / (7 - 2) + 7 ** 3 + "<br><br>");
+         //Result: 1185.4
+
+         document.write("i + i % 3 / (7 - 2 + 7) ** 3 = <br>");
+         document.write(i + i % 3 / (7 - 2 + 7) ** 3 + "<br><br>");
+         //Result: 842.0011574074074
+
+         document.write("i + i % 3 / 7 - (2 + 7) ** 3 = <br>");
+         document.write(i + i % 3 / 7 - (2 + 7) ** 3 + "<br><br>");
+         //Result: 113.28571428571433
+
+         document.write("(i + i) % 3 / (7 - 2) + 7 ** 3 = <br>");
+         document.write((i + i) % 3 / (7 - 2) + 7 ** 3 + "<br><br>");
+         //Result: 343.2
+
+         document.write("i + i % 3 / (7 - (2 + 7)) ** 3 = <br>");
+         document.write(i + i % 3 / (7 - (2 + 7)) ** 3 + "<br>");
+         //Result: 841.75
+
+
+
+       </script>
+
+       </head>
+
+       <body>
+
+       </body>
+
+<html>

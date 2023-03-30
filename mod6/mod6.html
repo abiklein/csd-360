@@ -1,0 +1,66 @@
+<!--
+Abigail Klein
+April 16, 2023
+Module 6 Assignment
+
+Program Description:
+A page that displays the first 30 Fibonacci numbers.
+-->
+
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <head>
+      <title>Module 6 Assignment</title>
+        <script>
+          //Declare all variables
+          var counter, total, first, second;
+
+          //Display page title
+          document.write(document.title + "<br><hr><br>");
+
+          //Display the first variable with a value of 1, example: “1 – 1”
+          first = 1;
+          counter = 1;
+          document.write(counter + " - " + first + "<br><br>");
+
+          //Display the second variable with a value of 1, Example: “2 – 1”
+          second = 1;
+          counter = 2;
+          document.write(counter + " - " + second + "<br><br>");
+
+          //Start a for loop giving the counter a value of 3.
+          //Test the counter to ensure a value less than or equal to 30.
+          //Increment the counter
+          for (counter = 3; counter <= 30; counter++) {
+            //Assign a totalizer variable with the added values of the first and second variables.
+            total = first + second;
+
+            //Output the values of counter and totalizer each iteration.
+            //Use document.write to display the output.
+            document.write(counter + " - " + total + "<br><br>");
+
+            //Assign the first variable the value of the second.
+            first = second;
+
+            //Assign the second variable the value of the totalizer.
+            second = total;
+
+            //Test the loop again.
+          }
+        </script>
+
+       </head>
+
+       <body>
+
+       </body>
+
+<html>
+
+<!--
+  References:
+https://www.tutorialspoint.com/How-to-display-the-title-of-a-document-with-JavaScript
+https://www.w3schools.com/js/js_let.asp
+  -->

@@ -1,0 +1,77 @@
+<!--
+Abigail Klein
+March 26, 2023
+Module 3 Assignment 1
+
+Program description: 
+A web page with a short story of an event in my life. Inside the story:
+  - Four <span> tags containing a blank line (underscores).
+  - Declare four variables holding the string inputs for these tags.
+  - Buttons for each <span> tag that will replace the underscores when selected.
+-->
+
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <head>
+      <title>Module 3 Assignment 1</title>
+
+       <script>
+
+           var first = "frogs";
+
+           var second = "miniature hull of the speedy and elusive fish and amphibians";
+
+           var third = "There the frog was! On top of my grandma's head! "
+            + "For a moment, my grandma panicked, swatting the little creature off her head.";
+
+       </script>
+
+       </head>
+
+       <body>
+
+       <p> Funny Frogs </p>
+
+       <p> When my sister and I were kids, we loved to go to the swamp right
+         next to our grandmother's house. There we would catch tadpoles,
+         baby catfish, minnows, and <span id = "frogs"> _________ </span>.
+       </p>
+
+       <p> We were dedicated hunters, our feet bare and pants rolled up to
+         our thighs so that we could tread the water more carefully and stealthily.
+         During our minutes or hours of stalking, cups in hand, we would swipe in
+         the water, check our catch, and stalk again until we either got hungry or bored.</p>
+
+        <p>By the end of the day, my sister and I would be so thrilled with whatever
+          <span id = "hull">______________________________ </span> we managed
+         to get during our hunting spree, we failed to contain our excitement and could
+         not wait to show our family. That day, our prize catch was a small frog.
+       In preparation to show everyone, we placed him in a cup with a cap over the
+     top that had a small hole so that he could breath.</p>
+
+       <p>By the time we herded everyone together, our mom, grandma, aunt, and dad
+         surrounded the cup, proud and eager to see what was inside. As the lid slowly
+         opened, so did everyone lean forward to get a better look as to what was inside.
+         As they leaned even closer, and the lid revealed the prize, suddenly,
+         everyone froze with shock! The cup...was empty. Confused, my sister and I
+         were trying to think of how the frog escaped. I turned to my grandma, feeling defeated,
+         and gasped! <span id="frogReveal"> __________________ </span> As the little amphibian hopped away, unharmed,
+       everyone laughed and the experience became a heartfelt memory.</p>
+
+       <p>
+
+           <button type="button"
+             onclick="document.getElementById('frogs').innerHTML = first">Amphibians</button> <br />
+
+          <button type="button"
+            onclick="document.getElementById('hull').innerHTML = second">Hull</button> <br />
+
+          <button type="button"
+            onclick="document.getElementById('frogReveal').innerHTML = third">Frog's Reveal</button> <br />
+
+       </p>
+ </body>
+
+<html>

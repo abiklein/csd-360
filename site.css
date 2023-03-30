@@ -1,0 +1,70 @@
+/*
+  Abigail Klein
+  Module 4.2 Assignment
+  January 20, 2023
+*/
+
+/* All CSS styles go here */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&family=Quattrocento:wght@400;700&display=swap');
+html{
+  box-sizing: border-box;
+}
+*,*:before, *:after{
+  box-sizing: inherit;
+}
+img{
+  max-width: 100%;
+}
+
+#container{
+  margin-top: 50px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+body{
+  font-family: Oswald, Verdana, Arial, sans-serif;
+}
+
+h1, h2, h3, h4{
+  background-color: #3c275a;
+  color: #fff;
+  border: 1px solid #D6A800;
+  padding: 10px;
+}
+
+/*address link*/
+a:link{
+  color: #453674;
+  text-decoration: none;
+}
+a:hover{
+  color: #4F3674;
+  background-color: #D6A800;
+}
+a:visited{
+  text-decoration: #3c275a;
+}
+
+/*sentence class*/
+.sentence{
+  font-style: italic;
+}
+
+/*intro class*/
+.intro{
+  text-indent: 2em;
+}
+
+
+/*new type of code to help with responsive design*/
+/*In plain terms, it says "when the screen is a minium width, activate these style
+rules." The rules follow inside of the curly brackets like any other CSS*/
+@media screen and (min-width: 768px){
+
+
+  }
+@media screen and (min-width: 1024px){
+
+
+  }

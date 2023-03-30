@@ -1,0 +1,44 @@
+<!--
+Abigail Klein
+April 23, 2023
+Module 7 Assignment
+
+Program Description:
+A page that displays an array in its original order and in its reversed order.
+-->
+
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <head>
+      <title>Module 7 Assignment</title>
+      <script>
+        //Create an array of 10 favorite sport teams
+        const sports = ["Packers", "Bears", "Vikings", "Dolphins", "Cubs", "Celtics", "Arsenal", "Bruins", "Lightning", "White Sox"]
+        //Using a for loop, print the array first in the original array order
+        document.write("Sports Array in the Original Order: <br><br>");
+        for(var i = 0; i < sports.length; i++){
+          document.write((i + 1) + ". " + sports[i] + "<br>");
+        }
+        document.write("<br>");
+
+        //Using a for loop, print the array first in the reverse order
+        document.write("Sports Array in the Reverse Order: <br><br>");
+        for(var i = sports.length; i > 0; i--){
+          document.write(((sports.length - i)+ 1) + ". " + sports[i-1] + "<br>");
+        }
+      </script>
+
+       </head>
+
+       <body>
+
+       </body>
+
+<html>
+
+<!--
+  References:
+
+  -->

@@ -1,0 +1,78 @@
+<!--
+Abigail Klein
+April 9, 2023
+Module 5 Assignment
+
+Program Description:
+A page that "rolls dice" and then, using switch statements,
+displays on of the following:
+    - "Snake Eyes" when total = 2
+    - "Box Cars" when total = 12
+    - "You Win" when total = 7 or 11
+    - total of the two dice by default
+-->
+
+<!DOCTYPE html>
+
+<html lang='en'>
+
+    <head>
+      <title>Module 5 Assignment</title>
+
+      <script type = "text/javascript">
+     function rollDice(){
+     document.form1.dice1.value = Math.floor((Math.random() * 6) + 1);
+     document.form1.dice2.value = Math.floor((Math.random() * 6) + 1);
+     document.form1.total.value = parseInt(document.form1.dice1.value) +
+     parseInt(document.form1.dice2.value);
+     var total = parseInt(document.form1.dice1.value) +
+     parseInt(document.form1.dice2.value);
+     switch(total){
+       case 2:
+        document.form1.total.value = "Snake Eyes";
+        break;
+
+       case 7:
+       case 11:
+        document.form1.total.value = "You Win";
+        break;
+
+       case 12:
+        document.form1.total.value = "Box Cars";
+        break;
+
+       default:
+         document.form1.total.value = total;
+         break;
+
+     }
+     }
+    </script>
+
+    <form name='form1'>
+     <table border='1'>
+     <tr>
+     <td> Dice 1 </td>
+     <td> <input type='text' name='dice1' /> </td>
+     <td> Dice 2 </td>
+     <td> <input type='text' name='dice2' /> </td>
+     <td> <input type='button' name='button1' onclick='rollDice()' value=' Roll Dice ' /> </td>
+     <td> Total </td>
+     <td> <input type='text' name='total' /> </td>
+     </tr>
+     </table>
+     <input type='button' name='button5' value='Reset' onclick='reset()' />
+    </form>
+
+       </head>
+
+       <body>
+
+       </body>
+
+<html>
+
+<!--
+  References:
+  https://www.w3schools.com/js/js_switch.asp
+  -->
