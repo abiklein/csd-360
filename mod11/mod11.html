@@ -1,34 +1,107 @@
-<!--
-Abigail Klein
-May 14, 2023
-Module 11 Assignment
-
-Program Description:
-A page similar to that of the example provided on Blackboard.
-DOM will alter based on user input.
-When an image is clicked, a function will execute using the "onclick" MouseEvent.
+<!-- Abigail Klein
+  May 13, 2023
+  Module 11
 -->
 
-<!DOCTYPE html>
 
-<html lang='en'>
-
-    <head>
-      <title>Module 11 Assignment</title>
-
-      <script type = "text/javascript">
-
-      </script>
-
-       </head>
-
-       <body>
-
-       </body>
+<!DOCTYPE HTML >
 
 <html>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>
+      Photo Slider
+    </title>
+    <style>
+      body {
+        font-family: Arial;
+        margin: 0;
+      }
 
-<!--
-  References:
+      * {
+        box-sizing: border-box;
+      }
 
-  -->
+      img {
+        vertical-align: middle;
+      }
+
+      /* Position the image container */
+      .container {
+        position: relative;
+      }
+
+      /* BlackBox for Spacing */
+      .blackBox {
+        text-align: center;
+        background-color: #222;
+        padding: 2px 16px;
+      }
+
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Six columns side by side */
+      .column {
+        float: left;
+        width: 16.66%;
+      }
+
+    </style>
+    <script>
+
+      function displayImage(imageFile){
+        var largerImage = document.getElementById("mainImage");
+        var newNode = document.createElement("img");
+        newNode.id = "mainImage";
+        newNode.src = imageFile;
+        newNode.className = "mainImage";
+        newNode.style.width = "100%";
+        largerImage.parentNode.replaceChild(newNode, largerImage);
+      }
+    </script>
+
+    <link rel='stylesheet' type='text/css' href='body1.css' />
+
+  </head>
+
+  <body>
+
+
+    <div class = "container">
+      <img src="1.jpg" id="mainImage"
+            alt = "Large Image" width="100%" alt="Pink Flower"></img>
+
+      <div class="blackBox">
+
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img src="1.jpg" width = "100%" onclick="displayImage('1.jpg')" alt="Pink Flower">
+        </div>
+        <div class="column">
+          <img src="2.jpg" width = "100%" onclick="displayImage('2.jpg')" alt="Blue Flower">
+        </div>
+        <div class="column">
+          <img src="3.jpg" width = "100%" onclick="displayImage('3.jpg')" alt="Purple Flower">
+        </div>
+        <div class="column">
+          <img src="4.jpg" width = "100%" onclick="displayImage('4.jpg')" alt="Yellow Flower">
+        </div>
+        <div class="column">
+          <img src="5.jpg" width = "100%" onclick="displayImage('5.jpg')" alt="Red Flower">
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
+
+<!-- References
+https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp
+-->

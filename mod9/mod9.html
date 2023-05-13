@@ -8,7 +8,7 @@ A function, titled counter, that takes an array of numbers as its parameter
 will return an array holding the numbers of:
     - negative elements
     - zeros
-    - values greater than zero in the given array parameter
+    - values greater than zero in the given
 -->
 
 <!DOCTYPE html>
@@ -19,6 +19,21 @@ will return an array holding the numbers of:
       <title>Module 9 Assignment</title>
 
       <script type = "text/javascript">
+
+        //Create an array that can hold 10 elements
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        //function that takes an array of numbers as its parameter
+        //returns an array holding
+        function counter(array){
+          for(i = 0; i < numbers.length; i++){
+              numbers[i] = " " + (Math.floor(Math.random() * (10-(-10))) + (-10));
+          }
+          return numbers
+        }
+
+        //invoke function
+        document.write(counter(numbers));
 
       </script>
 
@@ -32,5 +47,8 @@ will return an array holding the numbers of:
 
 <!--
   References:
+  https://www.w3schools.com/js/js_arrays.asp#:~:text=Using%20an%20array%20literal%20is%20the%20easiest%20way,practice%20to%20declare%20arrays%20with%20the%20const%20keyword.
+  https://www.w3schools.com/JS/js_random.asp
+  https://www.w3schools.com/js/js_functions.asp
 
   -->

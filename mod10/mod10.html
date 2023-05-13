@@ -4,7 +4,7 @@ May 7, 2023
 Module 10 Assignment
 
 Program Description:
-A page with style alterations based on user events such as: 
+A page with style alterations based on user events such as:
     - an image change
     - font style and/or color
     - background color
@@ -17,19 +17,64 @@ A page with style alterations based on user events such as:
     <head>
       <title>Module 10 Assignment</title>
 
-      <script type = "text/javascript">
+      <script>
 
+        function backgroundChange(){
+          const colors = ["blue", "red", "yellow", "white"]
+          let x = Math.floor((Math.random() * 4));
+          document.getElementById("color").style.backgroundColor = colors[x];
+        }
+        function changeText(id){
+          id.innerHTML = "The new text!";
+        }
       </script>
 
-       </head>
+      <link rel='stylesheet' type='text/css' href='body1.css' />
 
-       <body>
+    </head>
 
-       </body>
+    <body>
+      <h1 onclick="changeText(this)" onmouseover="this.style.color='red';"
+      onmouseout= "this.style.color='black';"> Click to get rid of this old text.</h1>
+      <br />
+      <div>
+        Hover over the picture to see the wood change!
+        <br>
+
+        <a href=#
+           onmouseover="wood.src='woodHeart.jpg';"
+           onmouseout= "wood.src='wood.jpg';"
+        >
+          <img border = 0 name = "wood" src = "wood.jpg" width="500px">
+        </a>
+      </div>
+      <br />
+      <div>
+        <br />
+
+      </div>
+      <br />
+      <div>
+        <br><br>
+        Type in the box below to change the color of the box.
+        There are four optional colors: Red, Blue, Yellow, and White.
+        <br>
+
+        <input type="text" id="color" onkeypress="backgroundChange()">
+      </div>
+
+    </body>
+
+
 
 <html>
 
 <!--
   References:
+  https://www.w3schools.com/jsref/event_onkeypress.asp
+  https://www.w3schools.com/html/html_form_input_types.asp
+  https://www.w3schools.com/jsref/event_onmouseover.asp
+  https://www.w3schools.com/js/js_htmldom_events.asp
+  https://cyberactive.bellevue.edu/ultra/courses/_517639_1/cl/outline
 
   -->
